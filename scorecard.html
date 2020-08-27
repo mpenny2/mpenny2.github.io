@@ -1,0 +1,344 @@
+<html>
+<link rel="stylesheet" href="golf.css">
+<body style = "background-image: url('congo.gif')">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> -->
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script type="text/javascript" src="golf_fire.js"></script>
+<div style="font-family: 'Apple-Chancery'">
+<p style="color:white; font-size:30;margin-bottom: 10px"> McCarthy Family Lifetime Scorecard - Gold Course</p>
+<article class="front9" >
+    <div class="hole">
+        <span>Front</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>Out</span>
+    </div>
+    <div class="par">
+        <span >Par</span>
+        <span>4</span>
+        <span>4</span>
+        <span>3</span>
+        <span>4</span>
+        <span>3</span>
+        <span>5</span>
+        <span>5</span>
+        <span>4</span>
+        <span>4</span>
+        <span>36</span>
+    </div>
+    <div class="score" id="mikey-front">
+        <span style="color:black">Michael</span>
+        <span id="mikey-1"></span>
+        <span id="mikey-2"></span>
+        <span id="mikey-3"></span>
+        <span id="mikey-4"></span>
+        <span id="mikey-5"></span>
+        <span id="mikey-6"></span>
+        <span id="mikey-7"></span>
+        <span id="mikey-8"></span>
+        <span id="mikey-9"></span>
+        <span class="sub" id="mikey-fs"></span>
+        
+    </div>
+    <div class="score" id="patrick-front">
+        <span style="color:black">Patrick</span>
+        <span id="patrick-1"></span>
+        <span id="patrick-2"></span>
+        <span id="patrick-3"></span>
+        <span id="patrick-4"></span>
+        <span id="patrick-5"></span>
+        <span id="patrick-6"></span>
+        <span id="patrick-7"></span>
+        <span id="patrick-8"></span>
+        <span id="patrick-9"></span>
+        <span class="sub" id="patrick-fs"></span>
+        
+    </div>
+    
+    <div class="score" id="dan-front">
+        <span style="color:black">Dan</span>
+        <span id="dan-1"></span>
+        <span id="dan-2"></span>
+        <span id="dan-3"></span>
+        <span id="dan-4"></span>
+        <span id="dan-5"></span>
+        <span id="dan-6"></span>
+        <span id="dan-7"></span>
+        <span id="dan-8"></span>
+        <span id="dan-9"></span>
+        <span class="sub" id="dan-fs"></span>
+        
+
+    </div>
+    <div class="score" id="frankie-front">
+        <span style="color:black">Frankie</span>
+        <span id="frankie-1"></span>
+        <span id="frankie-2"></span>
+        <span id="frankie-3"></span>
+        <span id="frankie-4"></span>
+        <span id="frankie-5"></span>
+        <span id="frankie-6"></span>
+        <span id="frankie-7"></span>
+        <span id="frankie-8"></span>
+        <span id="frankie-9"></span>
+        <span class="sub" id="frankie-fs"></span>
+        
+
+    </div>
+    <div class="score" id="john-front">
+        <span style="color:black">John</span>
+        <span id="john-1"></span>
+        <span id="john-2"></span>
+        <span id="john-3"></span>
+        <span id="john-4"></span>
+        <span id="john-5"></span>
+        <span id="john-6"></span>
+        <span id="john-7"></span>
+        <span id="john-8"></span>
+        <span id="john-9"></span>
+        <span class="sub" id="john-fs"></span>
+        
+
+    </div>
+    <div class="score" id="thomas-front">
+        <span style="color:black">Thomas</span>
+        <span id="thomas-1"></span>
+        <span id="thomas-2"></span>
+        <span id="thomas-3"></span>
+        <span id="thomas-4"></span>
+        <span id="thomas-5"></span>
+        <span id="thomas-6"></span>
+        <span id="thomas-7"></span>
+        <span id="thomas-8"></span>
+        <span id="thomas-9"></span>
+        <span class="sub" id="thomas-fs"></span>
+        
+
+    </div>
+    <div class="score" id="mike-front">
+        <span style="color:black">Mike</span>
+        <span id="mike-1"></span>
+        <span id="mike-2"></span>
+        <span id="mike-3"></span>
+        <span id="mike-4"></span>
+        <span id="mike-5"></span>
+        <span id="mike-6"></span>
+        <span id="mike-7"></span>
+        <span id="mike-8"></span>
+        <span id="mike-9"></span>
+        <span class="sub" id="mike-fs"></span>
+        
+
+    </div>
+    <div class="score" id="frank-front">
+        <span style="color:black">Frank</span>
+        <span id="frank-1"></span>
+        <span id="frank-2"></span>
+        <span id="frank-3"></span>
+        <span id="frank-4"></span>
+        <span id="frank-5"></span>
+        <span id="frank-6"></span>
+        <span id="frank-7"></span>
+        <span id="frank-8"></span>
+        <span id="frank-9"></span>
+        <span class="sub" id="frank-fs"></span>
+        
+
+    </div>
+    <div class="score" id="chris-front">
+        <span style="color:black">Chris</span>
+        <span id="chris-1"></span>
+        <span id="chris-2"></span>
+        <span id="chris-3"></span>
+        <span id="chris-4"></span>
+        <span id="chris-5"></span>
+        <span id="chris-6"></span>
+        <span id="chris-7"></span>
+        <span id="chris-8"></span>
+        <span id="chris-9"></span>
+        <span class="sub" id="chris-fs"></span>
+        
+
+    </div>
+</article>
+<article class="back9">
+    <div class="hole">
+        <span>Back</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+        <span>17</span>
+        <span>18</span>
+        <span>In</span>
+        <span>Total</span>
+    </div>
+    <div class="par">
+        <span>Par</span>
+        <span>5</span>
+        <span>3</span>
+        <span>4</span>
+        <span>3</span>
+        <span>5</span>
+        <span>4</span>
+        <span>4</span>
+        <span>4</span>
+        <span>3</span>
+        <span>35</span>
+		<span>71</span>
+    </div>
+    <div class="score"  id="mikey-back">
+        <span> Score</span>
+        <span id="mikey-10"></span>
+        <span id="mikey-11"></span>
+        <span id="mikey-12"></span>
+        <span id="mikey-13"></span>
+        <span id="mikey-14"></span>
+        <span id="mikey-15"></span>
+        <span id="mikey-16"></span>
+        <span id="mikey-17"></span>
+        <span id="mikey-18"></span>
+        <span class="sub" id="mikey-bs"></span>
+        <span class="sub" id = "mikey-ts"></span>
+        
+    </div>
+    <div class="score"  id="patrick-back">
+        <span> Score</span>
+        <span id="patrick-10"></span>
+        <span id="patrick-11"></span>
+        <span id="patrick-12"></span>
+        <span id="patrick-13"></span>
+        <span id="patrick-14"></span>
+        <span id="patrick-15"></span>
+        <span id="patrick-16"></span>
+        <span id="patrick-17"></span>
+        <span id="patrick-18"></span>
+        <span class="sub" id="patrick-bs"></span>
+        <span class="sub" id = "patrick-ts"></span>
+        
+    </div>
+    
+    <div class="score" id = "dan-back">
+<span> Score</span>
+        <span id="dan-10"></span>
+        <span id="dan-11"></span>
+        <span id="dan-12"></span>
+        <span id="dan-13"></span>
+        <span id="dan-14"></span>
+        <span id="dan-15"></span>
+        <span id="dan-16"></span>
+        <span id="dan-17"></span>
+        <span id="dan-18"></span>
+
+        <span class="sub" id="dan-bs"></span>
+        <span class="sub" id = "dan-ts"></span>
+    </div>
+    <div class="score" id = "frankie-back">
+<span> Score</span>
+        <span id="frankie-10"></span>
+        <span id="frankie-11"></span>
+        <span id="frankie-12"></span>
+        <span id="frankie-13"></span>
+        <span id="frankie-14"></span>
+        <span id="frankie-15"></span>
+        <span id="frankie-16"></span>
+        <span id="frankie-17"></span>
+        <span id="frankie-18"></span>
+
+        <span class="sub" id="frankie-bs"></span>
+        <span class="sub" id = "frankie-ts"></span>
+    </div>
+    <div class="score" id = "john-back">
+<span> Score</span>
+        <span id="john-10"></span>
+        <span id="john-11"></span>
+        <span id="john-12"></span>
+        <span id="john-13"></span>
+        <span id="john-14"></span>
+        <span id="john-15"></span>
+        <span id="john-16"></span>
+        <span id="john-17"></span>
+        <span id="john-18"></span>
+
+        <span class="sub" id="john-bs"></span>
+        <span class="sub" id = "john-ts"></span>
+    </div>
+    <div class="score" id = "thomas-back">
+<span> Score</span>
+        <span id="thomas-10"></span>
+        <span id="thomas-11"></span>
+        <span id="thomas-12"></span>
+        <span id="thomas-13"></span>
+        <span id="thomas-14"></span>
+        <span id="thomas-15"></span>
+        <span id="thomas-16"></span>
+        <span id="thomas-17"></span>
+        <span id="thomas-18"></span>
+
+        <span class="sub" id="thomas-bs"></span>
+        <span class="sub" id = "thomas-ts"></span>
+    </div>
+    <div class="score" id = "mike-back">
+<span> Score</span>
+        <span id="mike-10"></span>
+        <span id="mike-11"></span>
+        <span id="mike-12"></span>
+        <span id="mike-13"></span>
+        <span id="mike-14"></span>
+        <span id="mike-15"></span>
+        <span id="mike-16"></span>
+        <span id="mike-17"></span>
+        <span id="mike-18"></span>
+
+        <span class="sub" id="mike-bs"></span>
+        <span class="sub" id = "mike-ts"></span>
+    </div>
+   <div class="score" id = "frank-back">
+<span> Score</span>
+        <span id="frank-10"></span>
+        <span id="frank-11"></span>
+        <span id="frank-12"></span>
+        <span id="frank-13"></span>
+        <span id="frank-14"></span>
+        <span id="frank-15"></span>
+        <span id="frank-16"></span>
+        <span id="frank-17"></span>
+        <span id="frank-18"></span>
+
+        <span class="sub" id="frank-bs"></span>
+        <span class="sub" id = "frank-ts"></span>
+    </div>
+    <div class="score" id = "chris-back">
+<span> Score</span>
+        <span id="chris-10"></span>
+        <span id="chris-11"></span>
+        <span id="chris-12"></span>
+        <span id="chris-13"></span>
+        <span id="chris-14"></span>
+        <span id="chris-15"></span>
+        <span id="chris-16"></span>
+        <span id="chris-17"></span>
+        <span id="chris-18"></span>
+
+        <span class="sub" id="chris-bs"></span>
+        <span class="sub" id = "chris-ts"></span>
+    </div>
+</article>
+</div>
+</body>
+</html>

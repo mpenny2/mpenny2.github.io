@@ -1,0 +1,79 @@
+.front9, .back9 {
+  margin-bottom: 1em;
+}
+.front9 .hole, .back9 .hole {
+  background-color: gold;
+  color: #fff;
+}
+.front9 .hole span, .back9 .hole span {
+  padding: .5em 0;
+  border: gold solid 1px;
+  font-family: 'Times New Roman'"
+}
+.front9 .par, .back9 .par {
+  background-color: #ccc;
+  color: #777;
+}
+.front9 .par span, .back9 .par span {
+  padding: .25em 0;
+  border: #ccc solid 1px;
+}
+.front9 .score, .back9 .score {
+  color: #f63;
+  padding: .25em 0;
+  border: black solid 1px;
+  border-width: 0px 0px 1px 0px;
+
+}
+.front9 .score span, .back9 .score span {
+  padding: .25em 0;
+  border: white solid 1px;
+  border-width: 1px 1px 1px 1px;
+  /*outline:1px solid black;*/
+  /*border: blue solid 1px;
+  border-width: 0 0 0 1px;
+  display: inline-block;*/
+  /*border: 1px solid black*/
+}
+.sub{
+  padding: .25em 0;
+  border: black solid 1px;
+  border-width: 1px 1px 1px 1px;
+  background-color: lightgrey;
+  color :black;
+  /*outline:1px solid black;*/
+  /*border: blue solid 1px;
+  border-width: 0 0 0 1px;
+  display: inline-block;*/
+  /*border: 1px solid black*/
+}
+.front9 span, .back9 span {
+  border: black solid 1px;
+  border-width: 1px 1px 1px 1px;
+  display: inline-block;
+  text-align: center;
+  width: 3em;
+}
+
+.score{
+  background-color: white;
+}
+.front9 span:first-child, .back9 span:first-child {
+  text-align: left;
+  padding-left: .25em;
+  border-width: 0;
+  width: 5em;
+  outline: none;
+}
+
+@media screen and (min-width: 80em) {
+  .front9, .back9 {
+    display: inline-block;
+  }
+
+  .back9 span:first-child {
+    display: none;
+  }
+ 
+  
+}
